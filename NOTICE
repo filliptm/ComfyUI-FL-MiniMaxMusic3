@@ -1,0 +1,21 @@
+ComfyUI-FL-MiniMaxMusic3
+Copyright 2026 filliptm
+
+The optional training backend installs and executes an unmodified, pinned
+SimpleTuner distribution as a separate program. SimpleTuner is licensed under
+AGPL-3.0-or-later and is not copied into this repository.
+
+On Windows, the backend installer builds TrainingSample 0.3.1 from its verified
+MIT-licensed source archive with the OpenCV image/video feature disabled. The
+Music 3 audio training path does not use that feature.
+
+The managed Windows environment includes this project's fcntl compatibility
+module. It adapts SimpleTuner's cache-file flock calls to msvcrt.locking without
+modifying the SimpleTuner distribution.
+
+MiniMax Music 3 model artifacts remain subject to their respective model
+licenses. Downloading them requires an explicit user action.
+
+The optional MOSS-Music preprocessing model and its pinned remote model code
+are downloaded from OpenMOSS-Team and executed in a separate environment.
+MOSS-Music is Apache-2.0 licensed and is not copied into this repository.

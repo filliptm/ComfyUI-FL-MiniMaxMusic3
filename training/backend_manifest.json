@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "backend_id": "simpletuner-085f535-cu130",
+  "simpletuner_commit": "085f535e97aa17e698978483983c96809ca0b29b",
+  "simpletuner_source": "https://github.com/bghira/SimpleTuner.git",
+  "python_min": "3.12",
+  "python_max": "3.13",
+  "extra": "cuda13",
+  "extra_index_url": "https://download.pytorch.org/whl/cu130",
+  "windows_torch_packages": [
+    "torch==2.11.0+cu130",
+    "torchvision==0.26.0+cu130",
+    "torchaudio==2.11.0+cu130"
+  ],
+  "windows_trainingsample": {
+    "version": "0.3.1",
+    "source_url": "https://files.pythonhosted.org/packages/e9/e0/1b1f3a7c105ba1efbd1bc9e05e48658cb841c1207d9526a84baf4fb9c469/trainingsample-0.3.1.tar.gz",
+    "source_sha256": "8435bf9b8be1f8f460c7e8cfa81b3af32a9bb631340d5d5715ec719cff5568d0",
+    "maturin": "maturin==1.14.1"
+  },
+  "windows_runtime_packages": [
+    "windows-curses==2.4.2"
+  ],
+  "pretrained_model": "MiniMaxAI/MiniMax-Music3",
+  "pretrained_vae": "SimpleTuner/MiniMax-Music-3-Encoder"
+}

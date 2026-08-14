@@ -1,0 +1,84 @@
+{
+  "id": "4f0f2a59-8ebd-4db8-b5bc-5b48f5980701",
+  "revision": 0,
+  "last_node_id": 4,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "FL_MiniMaxMusic3Dataset",
+      "pos": [80, 120],
+      "size": [360, 440],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {"name": "dataset", "type": "FL_MINIMAX_MUSIC3_DATASET", "links": [1]},
+        {"name": "report", "type": "STRING", "links": null}
+      ],
+      "properties": {"Node name for S&R": "FL_MiniMaxMusic3Dataset"},
+      "widgets_values": ["acceptance_funky_house", true, ".txt", ".lyrics", "reject", 1.0, 30.0, 3.0, "full", false]
+    },
+    {
+      "id": 2,
+      "type": "FL_MiniMaxMusic3TrainConfig",
+      "pos": [500, 20],
+      "size": [390, 590],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {"name": "train_config", "type": "FL_MINIMAX_MUSIC3_TRAIN_CONFIG", "links": [2]}
+      ],
+      "properties": {"Node name for S&R": "FL_MiniMaxMusic3TrainConfig"},
+      "widgets_values": ["16", 16, 0.0, 0.00005, 2, 1, 1, "constant", 0, 0.01, "adamw_bf16", "int8-quanto", "int8-quanto", true, 42, "fixed", 1, 1, true]
+    },
+    {
+      "id": 3,
+      "type": "FL_MiniMaxMusic3ValidationConfig",
+      "pos": [500, 660],
+      "size": [390, 360],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {"name": "validation_config", "type": "FL_MINIMAX_MUSIC3_VALIDATION_CONFIG", "links": [3]}
+      ],
+      "properties": {"Node name for S&R": "FL_MiniMaxMusic3ValidationConfig"},
+      "widgets_values": ["funky 125 bpm house, warm bassline, filtered guitar, neon alley atmosphere", "[chorus]\nRamen in the alley, let the whole block glow", 5, 42, "fixed", 4, 1.7, 2, 1]
+    },
+    {
+      "id": 4,
+      "type": "FL_MiniMaxMusic3LoRATrainer",
+      "pos": [1010, 280],
+      "size": [400, 280],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {"name": "dataset", "type": "FL_MINIMAX_MUSIC3_DATASET", "link": 1},
+        {"name": "train_config", "type": "FL_MINIMAX_MUSIC3_TRAIN_CONFIG", "link": 2},
+        {"name": "validation_config", "type": "FL_MINIMAX_MUSIC3_VALIDATION_CONFIG", "link": 3},
+        {"name": "resume_run", "type": "FL_MINIMAX_MUSIC3_TRAINING_RUN", "link": null}
+      ],
+      "outputs": [
+        {"name": "training_run", "type": "FL_MINIMAX_MUSIC3_TRAINING_RUN", "links": null},
+        {"name": "lora_path", "type": "STRING", "links": null}
+      ],
+      "properties": {"Node name for S&R": "FL_MiniMaxMusic3LoRATrainer"},
+      "widgets_values": ["acceptance_funky_house", "require_installed"]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 4, 0, "FL_MINIMAX_MUSIC3_DATASET"],
+    [2, 2, 0, 4, 1, "FL_MINIMAX_MUSIC3_TRAIN_CONFIG"],
+    [3, 3, 0, 4, 2, "FL_MINIMAX_MUSIC3_VALIDATION_CONFIG"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {"ds": {"scale": 0.8, "offset": [20, 20]}},
+  "version": 0.4
+}

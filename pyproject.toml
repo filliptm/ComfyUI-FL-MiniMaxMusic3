@@ -1,0 +1,20 @@
+[project]
+name = "ComfyUI-FL-MiniMaxMusic3"
+description = "MiniMax Music 3 inference, MOSS dataset preprocessing, and LoRA training for ComfyUI"
+version = "0.2.0"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = ["requests"]
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: GPU :: NVIDIA CUDA",
+]
+
+[project.urls]
+Repository = "https://github.com/filliptm/ComfyUI-FL-MiniMaxMusic3"
+
+[tool.comfy]
+PublisherId = "machinedelusions"
+DisplayName = "ComfyUI-FL-MiniMaxMusic3"
+Icon = "https://avatars.githubusercontent.com/u/55672949"

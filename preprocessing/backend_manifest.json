@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "backend_id": "moss-music-transformers-cu128-v1",
+  "python": "3.12",
+  "torch": "2.9.1+cu128",
+  "torchaudio": "2.9.1+cu128",
+  "transformers": "4.57.1",
+  "accelerate": "1.11.0",
+  "safetensors": "0.6.2",
+  "numpy": "2.3.4",
+  "soundfile": "0.13.1",
+  "tiktoken": "0.12.0",
+  "einops": "0.8.1",
+  "scipy": "1.16.3",
+  "tqdm": "4.67.1",
+  "packaging": "25.0",
+  "torch_index_url": "https://download.pytorch.org/whl/cu128"
+}
