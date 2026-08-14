@@ -4,6 +4,7 @@ MiniMax Music 3 nodes for ComfyUI with verified model downloads, full audio VAE 
 
 [![MiniMax Music 3](https://img.shields.io/badge/MiniMax-Music%203-blue?style=for-the-badge)](https://huggingface.co/MiniMaxAI/MiniMax-Music3)
 [![MOSS Music](https://img.shields.io/badge/MOSS-Music%208B-22c55e?style=for-the-badge)](https://huggingface.co/OpenMOSS-Team/MOSS-Music-8B-Instruct)
+[![Comfy Registry](https://img.shields.io/badge/Comfy%20Registry-Install-8b5cf6?style=for-the-badge)](https://registry.comfy.org/nodes/ComfyUI-FL-MiniMaxMusic3)
 [![Patreon](https://img.shields.io/badge/Patreon-Support%20Me-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/Machinedelusions)
 
 ## Features
@@ -34,7 +35,7 @@ MiniMax Music 3 nodes for ComfyUI with verified model downloads, full audio VAE 
 
 ### ComfyUI Manager
 
-After the pack is listed in the Comfy Registry, search for **FL MiniMax Music 3** and install it.
+Search for **FL MiniMax Music 3** and install it, or open the [Comfy Registry listing](https://registry.comfy.org/nodes/ComfyUI-FL-MiniMaxMusic3).
 
 ### Manual
 
