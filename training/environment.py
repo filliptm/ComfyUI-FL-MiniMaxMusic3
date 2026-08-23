@@ -5,7 +5,6 @@ import shutil
 import subprocess
 import tarfile
 import threading
-import venv
 from pathlib import Path
 
 import requests
@@ -194,6 +193,8 @@ def install_environment(callback=None):
         if callback:
             callback("Creating isolated Python environment")
         if not _python_path(environment).is_file():
+            import venv
+
             venv.EnvBuilder(with_pip=True, clear=False).create(environment)
         manifest = load_backend_manifest()
         commands = _install_commands(environment, manifest)

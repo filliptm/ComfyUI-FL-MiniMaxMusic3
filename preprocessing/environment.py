@@ -4,7 +4,6 @@ import shutil
 import subprocess
 import sys
 import threading
-import venv
 from pathlib import Path
 
 from ..training.paths import moss_backend_root, pack_root
@@ -99,6 +98,8 @@ def install_environment(callback=None):
         if callback:
             callback("Creating the isolated MOSS environment")
         if not _python_path(environment).is_file():
+            import venv
+
             venv.EnvBuilder(with_pip=True, clear=False).create(environment)
         python = str(_python_path(environment))
         _run([python, "-I", "-m", "pip", "install", "--upgrade", "pip", "wheel"], callback)

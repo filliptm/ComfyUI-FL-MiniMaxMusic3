@@ -1,3 +1,4 @@
+import importlib
 import json
 import tempfile
 import unittest
@@ -8,9 +9,22 @@ from conftest import pack_module
 
 
 environment = pack_module("training.environment")
+preprocessing_environment = pack_module("preprocessing.environment")
 
 
 class EnvironmentTests(unittest.TestCase):
+    def test_status_modules_import_without_venv(self):
+        original_import = __import__
+
+        def reject_venv(name, *args, **kwargs):
+            if name == "venv":
+                raise ModuleNotFoundError("No module named 'venv'")
+            return original_import(name, *args, **kwargs)
+
+        with mock.patch("builtins.__import__", side_effect=reject_venv):
+            importlib.reload(environment)
+            importlib.reload(preprocessing_environment)
+
     def test_status_requires_exact_manifest_marker(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
